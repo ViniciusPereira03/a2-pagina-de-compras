@@ -1,0 +1,102 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  padding: 32px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  width: 70vw;
+  margin: auto;
+}
+
+main {
+  width: 70vw;
+  margin: auto;
+}
+
+h1 {
+  margin-bottom: 8px;
+}
+
+h2 {
+  margin-top: 32px;
+}
+
+.header-links {
+  margin-left: 32px;
+}
+
+.box-area {
+  border: 1px solid #000;
+  padding: 17px 32px 16px 32px;
+  margin-top: 12px;
+}
+
+.title-box-area {
+  position: absolute;
+  margin-top: -26px;
+  background-color: #FFF;
+  padding: 0px 8px;
+  margin-left: -8px;
+  font-weight: 100;
+  font-size: 16px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px
+}
+
+.item {
+  padding: 16px;
+}
+
+.justify-spc-btwn {
+  justify-content: space-between;
+}
+
+.justify-ctr {
+  justify-content: center;
+}
+
+.input-text {
+  width: 162px;
+}
+
+dialog {
+  margin: auto;
+  padding: 32px;
+}
+
+.img-item{
+  width: 100px;
+  margin-right: 16px;
+}
+
+textarea {
+  width: 250px;
+  height: 200px;
+}
+
+.dialog-title {
+  font-size: 24px;
+}
+
+details {
+  margin: 16px 0px;
+}
+
+.spc-bttm {
+  margin-bottom: 16px;
+}

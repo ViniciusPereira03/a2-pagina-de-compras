@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Página de compras</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
+    <script defer src="scripts.js"></script>
+    
+  </head>
+  <body>
+    <header>
+      <h1>Meus pedidos</h1>
+      <nav class="header-links">
+        <ul>
+          <li> <a href="#meus_dados"> Meus dados </a></li>
+          <li> <a href="#minhas_compras"> Minhas compras </a></li>
+          <li> <a href="#avaliar_produto"> Avaliar produto </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="meus_dados">
+        <h2>Meus dados</h2>
+        <form>
+          <div class="box-area">
+            <h3 class="title-box-area">Dados da compra</h3>
+
+            <div class="col">
+              <label>Email</label>
+              <input class="input-text" type="email" name="email" value="" placeholder="ex: seuemail@gmail.com" />
+            </div>
+
+            <div class="row">
+              <input type="checkbox" name="receber_emails_promocionais" value="">
+              <label>Quero receber e-mails promocionais</label>
+            </div>
+
+            <div class="col">
+              <label>Senha</label>
+              <input class="input-text" type="password" name="senha" value="" placeholder="use uma senha forte" />
+            </div>
+          </div>
+          
+          <div class="box-area">
+            <h3 class="title-box-area">Dados pessoais</h3>
+
+            <div class="col">
+              <label>Nome completo</label>
+              <input class="input-text" type="text" name="nome" value="" placeholder="ex: João da Silva" />
+            </div>
+
+            <div class="col">
+              <label>Como gostara que a gente te chamasse? (opcional)</label>
+              <input class="input-text" type="text" name="apelido" value="" placeholder="Joãozin" />
+            </div>
+          </div>
+
+          <button>Salvar alterações</button>
+          
+        </form>
+      </section>
+
+      <section id="minhas_compras">
+        <h2>Minhas compras</h2>
+
+        <div class="box-area">
+          <div class="row justify-spc-btwn">
+            <div class="col item">
+              <label>Número do pedido</label>
+              <p>#37945982</p>
+            </div>
+            
+            <div class="col item">
+              <label>Status</label>
+              <p>Concluído</p>
+            </div>
+            
+            <div class="col item">
+              <label>Data</label>
+              <p>12/12/2020</p>
+            </div>
+            
+            <div class="col item">
+              <label>Forma de pagamento</label>
+              <p>Cartão de crédito</p>
+            </div>
+
+            <div class="col item">
+              <label>Acompanhamento</label>
+              <button type="button" onclick="openDialog()">Rastreio detalhado</button>
+
+              <dialog id='dialog-rastreio'>
+                <label class="dialog-title"><strong>Rastreio detalhado</strong></label>
+                <p>Seu pedido foi entregue com sucesso!</p>
+                <p>Entregue por: GFL</p>
+                <p>Código de rastreio: 123456789</p>
+                <p>Entregue em 12/12/20</p>
+                <button type="button" onclick="closeDialog()">Fechar</button>
+              </dialog>
+            </div>
+          </div>
+        </div>
+
+        <div class="box-area">
+          <div class="row justify-spc-btwn">
+
+            <div class="row ">
+              <div class="col justify-ctr">
+                <img class="img-item" src="/assets/suporte.jpg" alt="Suporte articulado para monitor e notebook de 13 a 32 Vinik, Articulação dupla - SMN500"/>
+              </div>
+              
+              <div class="col justify-ctr">
+                <h3>Suporte articulado para monitor e notebook de 13 a 32 Vinik, Articulação dupla - SMN500</h3>
+                <p>Quantidade: 1</p>
+                <a href="#avaliar_produto">Avaliar produto</a>
+              </div>
+            </div>
+            
+            <div class="col item">
+              <p>R$</p>
+              <p>99,90</p>
+            </div>
+          </div>
+        </div>
+
+        <details>
+          <summary>Detalhes do pagamento e envio</summary>
+          
+          <div class="row justify-spc-btwn">
+            <div class="col item">
+              <h3>Endereço de entrega</h3>
+              <p>Avenida Estelita Falcão</p>
+              <p>Número 12, Centro</p>
+              <p>CEP 48170-970 - Água Fria/BA</p>
+            </div>
+
+            <div class="col item">
+              <h3>Forma de pagamento</h3>
+              <p>Cartão de crédito</p>
+              <p>Master Card **** **** **** 1234</p>
+              <p>Titular: João da Silva</p>
+            </div>
+
+            <div class="col item">
+              <h3>Frete</h3>
+              <p>R$ 15,52</p>
+              <p>Enviado por <strong>GFL</strong></p>
+              <p>Entregue</p>
+            </div>
+          </div>
+        </details>
+
+        <hr>
+      </section>
+
+      <section id="avaliar_produto">
+        <h2>Avaliação do produto</h2> 
+        <form>
+          <div class="box-area">
+            <h3 class="title-box-area">Opinião sobre o produto</h3>
+
+            <div class="col spc-bttm">
+              <label><strong>Qual cor do produto mais te agrada?</strong></label>
+              <input type="color" name="color" list="cores">
+              <datalist id="cores">
+                <option value="#ff0000"/>
+                <option value="#00ff00"/>
+                <option value="#0000ff"/>
+              </datalist>
+            </div>
+
+            <div class="col spc-bttm">
+              <label><strong>O produto é de qualidade?</strong></label>
+              <div class="row">
+                <input type="radio" id="qualidade_1" name="qualidade" value="qualidade_1">
+                <label for="qualidade_1">Concordo Totalmente</label>
+              </div>
+
+              <div class="row">
+                <input type="radio" id="qualidade_2" name="qualidade" value="qualidade_2">
+                <label for="qualidade_2">Concordo</label>
+              </div>
+
+              <div class="row">
+                <input type="radio" id="qualidade_3" name="qualidade" value="qualidade_3">
+                <label for="qualidade_3">Não estou decidido</label>
+              </div>
+
+              <div class="row">
+                <input type="radio" id="qualidade_4" name="qualidade" value="qualidade_4">
+                <label for="qualidade_4">Discordo</label>
+              </div>
+
+              <div class="row">
+                <input type="radio" id="qualidade_5" name="qualidade" value="qualidade_5">
+                <label for="qualidade_5">Discordo Totalmente</label>
+              </div>
+            </div>
+
+            <div class="col spc-bttm">
+              <label><strong>Para você, quais parâmetros são mais importantes na qualidade do produto?</strong></label>
+              <div class="row">
+                <input type="checkbox" id="parametro_1" name="qualidade" value="parametro_1">
+                <label for="parametro_1">Durabilidade</label>
+              </div>
+
+              <div class="row">
+                <input type="checkbox" id="parametro_2" name="parametro" value="parametro_2">
+                <label for="parametro_2">Características acessórias ou Features</label>
+              </div>
+
+              <div class="row">
+                <input type="checkbox" id="parametro_3" name="parametro" value="parametro_3">
+                <label for="parametro_3">Confiabilidade</label>
+              </div>
+
+              <div class="row">
+                <input type="checkbox" id="parametro_4" name="parametro" value="parametro_4">
+                <label for="parametro_4">Aparência</label>
+              </div>
+            </div>
+
+            <div class="col">
+              <label><strong>Descreva a característica que mais chamou sua atenção no produto?</strong></label>
+              <input list="descricao" class="input-text" name="caracteristica">
+              <datalist id="descricao">
+                <option value="Cor"></option>
+                <option value="Tamanho"></option>
+                <option value="Peso"></option>
+                <option value="Material"></option>
+              </datalist>
+            </div>
+          </div>
+
+          <div class="box-area">
+            <h3 class="title-box-area">Condições atuais</h3>
+            
+            <div class="col">
+              <label><strong>Adicione uma foto atual do produto</strong></label>
+              <input type="file" id="foto_produto" name="foto_produto" accept="image/png, image/jpeg" />
+            </div>
+            
+            <div class="col">
+              <label><strong>Data da compra</strong></label>
+              <input class="input-text" type="date" name="data_compra">
+            </div>
+            
+            <div class="col">
+              <label><strong>Deixe um comentário sobre as condições do produto</strong></label>
+              <textarea rows="20" name="comentario"></textarea>
+            </div>
+          </div>
+
+          <button>Enviar avaliação</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
